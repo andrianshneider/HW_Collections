@@ -7,7 +7,7 @@ internal class Program
     //приватный класс для Задания 1 (список)
     private class Task1_List
     {
-        public List<string> ListHW = new List<string>() { "One","Two","Three"};
+        public List<string> ListHW = new List<string>() { "One","Two","Three","Four","Five"};
 
         public void TaskLoop()
         {
@@ -25,7 +25,7 @@ internal class Program
 
             Console.WriteLine("");
             Console.WriteLine("Введите текст для добавления в середину списка:");
-            ListHW.Insert(2, Console.ReadLine());
+            ListHW.Insert(ListHW.Count/2, Console.ReadLine());
 
             Console.WriteLine("");
             Console.WriteLine("Результирующий список после добавления элемента в середину списка:");
@@ -59,7 +59,7 @@ internal class Program
                     Console.WriteLine("Введите имя студента для добавления в базу (имя не должно быть пустым):");
                     name = Console.ReadLine();
                 }
-                while (name == "");
+                while (string.IsNullOrEmpty(name));
 
                 do
                 {
